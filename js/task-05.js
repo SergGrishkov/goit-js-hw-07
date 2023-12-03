@@ -9,7 +9,6 @@ const button = body.querySelector('button.change-color');
 const span = body.querySelector('span.color');
 
 button.addEventListener('click', event => {
-  console.log(event);
   let rgbColor = getRandomHexColor();
   body.style.backgroundColor = rgbColor;
   span.textContent = rgbColor;
