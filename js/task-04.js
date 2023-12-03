@@ -5,7 +5,6 @@ const password = form.querySelector('input[type=password]');
 form.addEventListener('submit', event => {
   event.preventDefault();
   const form = event.target;
-  console.log(form.elements);
   if (!event.target.email.value || !event.target.password.value) {
     alert('All form fields must be filled in');
   } else {
