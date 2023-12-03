@@ -4,13 +4,15 @@ const password = form.querySelector('input[type=password]');
 
 form.addEventListener('submit', event => {
   event.preventDefault();
-  if (!event.target[0].value || !event.target[1].value) {
+  const form = event.target;
+  console.log(form.elements);
+  if (!event.target.email.value || !event.target.password.value) {
     alert('All form fields must be filled in');
   } else {
-    let emName = event.target.firstElementChild.textContent.trim();
-    let emValue = event.target[0].value.trim();
-    let pwdName = event.target.lastElementChild.textContent.trim();
-    let pwdValue = event.target[1].value.trim();
+    let emName = event.target.email.name.trim();
+    let emValue = event.target.email.value.trim();
+    let pwdName = event.target.password.name.trim();
+    let pwdValue = event.target.password.value.trim();
     const result = {
       [emName]: emValue,
       [pwdName]: pwdValue,
