@@ -9,8 +9,7 @@ function getCategoryItemInfo(selector) {
   const itemList = document.querySelectorAll(selector);
   itemList.forEach(i => {
     console.log('Category: ' + i.firstElementChild.innerText);
-    const nestedItem = i.querySelectorAll('ul>li');
-    console.log('Elements: ' + nestedItem.length);
+    console.log('Elements: ' + i.lastElementChild.children.length);
   });
 }
 
